@@ -28,12 +28,12 @@
                 const username = document.getElementById('username').value;
                 const password = document.getElementById('password').value;
     
-                // Check if the credentials belong to the admin
+            
                 if (username === 'admin' && password === 'admin123') {
-                    // Redirect to the Admin Dashboard
+                
                     window.location.href = '/Screens/AdminDashboard/admin.html';
                 } else {
-                    // Redirect to a general user page or show an error
+                
                     alert('Invalid credentials or not an admin.');
                 }
             }
