@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #163823;
 }
 
 .topbar {
@@ -37,8 +38,40 @@ main {
     margin-top: 60px; /* to avoid being hidden behind the topbar */
 }
 
-#imgBack {
+.stack-container {
+    position: relative;
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100vh;
+    margin-top: 60px; /* to account for fixed header */
+    overflow: hidden;
+}
+
+#imgBack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.loginButton {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    color: white;
+    background-color:  #478f5e;
+    border: none;
+    padding: 25px 40px;
+    font-size: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+    border-width: 40px;
+}
+
+.loginButton:hover {
+    background-color: #0056b3;
 }

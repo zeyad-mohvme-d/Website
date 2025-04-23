@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
+    background-color: #163823;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@ body {
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    width: 300px;
+    width: 500px;
 }
 
 .contact-header {
