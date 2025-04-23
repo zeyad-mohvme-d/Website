@@ -1,0 +1,72 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #163823;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 350%;
+    color: whitesmoke;
+    margin-left: 580px;
+    margin-top: 100px;
+    text-shadow: #8bd8a9;
+}
+
+form{
+    max-width: 400px;
+    margin-left: 400px ;
+    margin-top: 100px;
+    padding: 40px 40px 40px 40px;
+    background-color: #163823;
+    box-shadow: 0 4px 20px #2e4a38;
+    border-radius: 23px;
+    border: 9px solid rgba(70, 215, 60, 0.616);
+}
+
+
+#name{
+    color: 	#f4efe9;
+    padding-left: 25px;
+}
+
+#password{
+    color: 	#f4efe9;
+    padding-left: 3px;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+} 
+
+input[type="password"]{
+    width: 70%;
+    padding: 10px 10px;
+    margin-top: 40px;
+    margin-left: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.createAccount{
+    width: 250px;
+    background-color: rgba(70, 215, 60, 0.616);
+    color: white;
+    font-size: 25px;
+    border: none;
+    border-bottom: 500px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 520px;
+    margin-bottom: 70px;
+    padding: 12px;
+}
