@@ -31,7 +31,7 @@ form {
 
 
 label {
-    
+
     margin-top: 20px;
     font-weight: bold;
     color: #7a9e9f; 
@@ -69,7 +69,7 @@ input:focus {
     margin-left: 500px;
     margin-bottom: 70px;
     padding: 12px;
-    
+
 }
 
 button:hover {

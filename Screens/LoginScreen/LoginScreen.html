@@ -9,17 +9,36 @@
         <h1 id="login">Login</h1>
         <form>
             <div>
-                <label for="nameEntry" class="label">Name</label>
-                <input type="text" id="nameEntry">
+                <label for="username" class="label">Name</label>
+                <input type="text" id="username" name="username" required>
             </div>
         <br>
             <div>
 
-                <label for="passEntry" class="pass">Password</label>
-                <input type="password" id="passEntry">
+                <label for="password" class="pass">Password</label>
+                <input type="password" id="password" name="password" required>
             </div>
         </form>
-        <button class="loginButton" >Login</button> <br>
-        <button class="RegisterButton" type="button" onclick="window.open('/Screens\\RegisterScreen\\RegisterScreen.html', '_blank')">Create Account</button>
+        <button class="loginButton" type="button" onclick="handleLogin()">Login</button> <br>
+        <button class="RegisterButton" type="button" onclick="window.open('/Screens/RegisterScreen/RegisterScreen.html', '_blank')">Create Account</button>
+
+
+        <script>
+            function handleLogin() {
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+    
+                // Check if the credentials belong to the admin
+                if (username === 'admin' && password === 'admin123') {
+                    // Redirect to the Admin Dashboard
+                    window.location.href = '/Screens/AdminDashboard/admin.html';
+                } else {
+                    // Redirect to a general user page or show an error
+                    alert('Invalid credentials or not an admin.');
+                }
+            }
+        </script>
+
+
     </body>
 </html>
