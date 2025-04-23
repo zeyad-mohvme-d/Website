@@ -1,5 +1,44 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1d8e45;
+    padding: 15px 20px;
+    color: white;
+    position: fixed;
+    width: 98%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+main {
+    margin-top: 60px; /* to avoid being hidden behind the topbar */
+}
+
 #imgBack {
-    width: 100%;    
-    height: auto;  
+    width: 100%;
+    height: auto;
     display: block;
 }
