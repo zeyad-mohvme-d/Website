@@ -8,6 +8,7 @@ function create() {
         localStorage.setItem('password', password);
 
         alert("Registration successful! Welcome " + username);
+        window.location.href = '/index.html'
     } else {
         alert("Please fill in both fields.");
     }

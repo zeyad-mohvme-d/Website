@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Dashboard.css">
+    </head>
+<body class="animated fadeIn">
+    <div id="wrapper">
+        <div id="menuOverlay" class="animated overlay-hidden"></div>
+        <!-- Main UI -->
+        <div class="menu animated fadeIn">
+            <button class='pulse-button' data-toggle="popover" title="Popover title" data-trigger="focus"
+                data-placement="right"
+                data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">&plus;</button>
+            <ul>
+                <li>
+                    <a href="">
+                        <div class="bars"></div>
+                    </a>
+                </li>
+                <li>
+                    <div class="heading">
+                        <div class="logo">
+                            <span class="logo-part animated fadeIn">M</span><span class="logo-rest">ultiplier</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="" class="tooltipped" data-position="right" data-delay="0" data-tooltip="Messaging">
+                        <span class="icons ion-chatboxes"></span>
+                        <span class="text">Chat</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="tooltipped" data-position="right" data-delay="0" data-tooltip="Profile">
+                        <span class="icons ion-person"></span>
+                        <span class="text">Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="tooltipped" data-position="right" data-delay="0" data-tooltip="Startups">
+                        <span class="icons ion-ios-briefcase"></span>
+                        <span class="text">Startup</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="tooltipped" data-position="right" data-delay="0" data-tooltip="Settings">
+                        <span class="icons ion-ios-settings-strong"></span>
+                        <span class="text">Setting</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="view animated fadeIn">
+            <header class="green accent-4">
+                <div class="container">
+                    <h1 class="h1">Welcome Manpreet!</h1>
+                </div>
+            </header>
+            <div class="card-group container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="card small">
+                            <div class="tabs" style="height: 100%;">
+                                <ul class="nav nav-pills" id="myTabs">
+                                    <li role="presentation" class="active animated"><a href="#home" aria-controls="home"
+                                            role="tab" data-toggle="tab">Connection</a> <button class='pulse-button'
+                                            data-toggle="popover" data-trigger="focus" title="Popover title"
+                                            data-placement="bottom"
+                                            data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">&plus;</button>
+                                    </li>
+                                    <li role="presentation" class="animated"><a href="#profile" aria-controls="profile"
+                                            role="tab" data-toggle="tab">New Startups</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active table-responsive" id="home">
+
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>No.</th>
+                                                    <th>Name</th>
+                                                    <th>Message</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th>1</th>
+                                                    <td>Manpreet</td>
+                                                    <td><span class="msg">Hi! How are you ? .. Could you help me out
+                                                            with my new Venture.. !!</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>2</th>
+                                                    <td>Jacob</td>
+                                                    <td><span class="msg">Hey Manni, lets catch up .. could we meet for
+                                                            a cup of Coffee.. Whatsay ?</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>3</th>
+                                                    <td>Larry</td>
+                                                    <td><span class="msg">The messaging is working pretty cool ..
+                                                            !</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="profile">Profile</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="card small text-center">
+                            <div class="card-content">
+                                <h1 class="h1">Profile Progress</h1>
+                                <h2 class="h2" style="font-size: 500%;">74%</h2>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="74"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 74%">
+                                        <span class="sr-only">74% Complete (success)</span>
+                                    </div>
+                                </div>
+                                <h1 class="h1" style="margin-top: 20px; margin-bottom: 0; font-size: 25px;">Connections
+                                </h1>
+                                <h2 class="h2" style="color: #39cb58; font-size: 500%; margin: 0;">142</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="card text-center">
+                <div class="card-content">
+                  <h1 class="h1">Profile Progress</h1>
+                  <h2 class="h2">74%</h2>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="74" aria-valuemin="0" aria-valuemax="100" style="width: 74%">
+                      <span class="sr-only">74% Complete (success)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>-->
+                    <!--<div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="card text-center">
+                <div class="card-content">
+                  <h1 class="h1">Connections</h1>
+                  <h1 class="h1">142</h1>
+                </div>
+              </div>
+            </div>-->
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="card medium text-center" style="min-height: 400px; height: auto;">
+                            <div class="card-action">
+                                <h2 class="h3">Startups Following</h2>
+                            </div>
+                            <div class="card-content" style="padding: 20px 7.5px;">
+                                <h1 class="h1" style="color: #39cb58; font-size: 500%;">9</h1>
+                                <div class="container-fluid startup_following" style="padding: 0;">
+                                    <div class="row" style="margin: 0;">
+                                        <div class="col-md-12">
+                                            <div class="alert alert-success" role="alert">
+                                                <button type="button" class="close" data-dismiss="alert"
+                                                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <strong>Warning!</strong> Better check yourself.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="alert alert-success" role="alert">
+                                                <button type="button" class="close" data-dismiss="alert"
+                                                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <strong>Warning!</strong> Better check yourself.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="alert alert-success" role="alert">
+                                                <button type="button" class="close" data-dismiss="alert"
+                                                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <strong>Warning!</strong> Better check yourself.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="card medium text-center">
+                            <div class="card-action">
+                                <h2 class="h3">Job Status</h2>
+                            </div>
+                            <div class="card-content">
+                                <h1 class="h1">Submission of Task</h1>
+                                <h1 class="h1">..</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="card medium text-center">
+                            <div class="card-action">
+                                <h2 class="h3">CrowdFunding</h2>
+                            </div>
+                            <div class="card-content">
+                                <h1 class="h1">Recieved Amount</h1>
+                                <h1 class="h1">5100$</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

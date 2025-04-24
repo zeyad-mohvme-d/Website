@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar {
+    width: 200px;
+    background: #333;
+    color: white;
+    padding: 15px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    margin: 10px 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background: white;
+    overflow-y: auto;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.progress-overview {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.progress {
+    background: #4CAF50;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
