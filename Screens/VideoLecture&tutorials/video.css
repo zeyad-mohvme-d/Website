@@ -49,3 +49,16 @@ a:hover {
     text-decoration: underline;
     color: #0056b3;
 }
+.download-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fefefe;
+    font-weight: bold;
+}
+
+.download-link:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
