@@ -1,73 +1,89 @@
-body{
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #163823;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #163823;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 50px;
 }
 
-h1{
-    font-size: 40px;
-    font-weight: 350%;
-    color: whitesmoke;
-    margin-left: 580px;
-    margin-top: 100px;
-    text-shadow: #8bd8a9;
-}
-
-form{
-    max-width: 400px;
-    margin-left: 400px ;
-    margin-top: 100px;
-    padding: 40px 40px 40px 40px;
-    background-color: #163823;
-    box-shadow: 0 4px 20px #2e4a38;
-    border-radius: 23px;
-    border: 9px solid rgba(70, 215, 60, 0.616);
-}
-
-
-.Name{
-    color: 	#f4efe9;
-    padding-left: 25px;
-}
-
-.password{
-    color: 	#f4efe9;
-    padding-left: 3px;
-}
-
-input[type="text"] {
-    width: 70%;
-    padding: 10px 12px;
-    margin-top: 8px;
-    border: 1px solid #000000;
+/* Registration Container */
+.register-container {
+    background-color: #f4efe9;
+    width: 350px;
+    padding: 40px;
     border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 16px;
-} 
-
-input[type="password"]{
-    width: 70%;
-    padding: 10px 10px;
-    margin-top: 40px;
-    margin-left: 5px;
-    border: 1px solid #000000;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 16px;
-    color: rgb(0, 0, 0);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-.createAccount{
-    width: 250px;
-    background-color: rgba(70, 215, 60, 0.616);
-    color: white;
-    font-size: 25px;
-    border: none;
-    border-bottom: 500px;
-    border-radius: 30px;
-    cursor: pointer;
-    margin-top: 20px;
-    margin-left: 520px;
-    margin-bottom: 70px;
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
     padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+/* Create Button */
+.createAccount {
+    width: 100%;
+    padding: 12px;
+    background-color: #478f5e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.createAccount:hover {
+    background-color: #478f5e;
+}
+
+/* Login Prompt */
+.login-prompt {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.login-prompt a {
+    color: #478f5e;
+    text-decoration: none;
+    font-weight: bold;
 }

@@ -1,54 +1,58 @@
-h1{
-    text-align: center;
-    color: #3b3c40;
-    font-size: xx-large;
-}
 
-
+/* General Styles */
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4efe9; 
+    background-color: #163823;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 50px;
 }
 
-
-form {
+/* Login Container */
+.login-container {
     max-width: 400px;
-    margin: 50px auto;
+    width: 100%;
+    margin: 20px auto;
     padding: 40px;
-    background-color: #ffffff;
+    background-color: #f4efe9;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
 }
 
-
-#login {
+/* Header */
+h1 {
     text-align: center;
     font-size: 32px;
-    color: #5c6d70; 
+    color: #478f5e;
+    margin-bottom: 30px;
 }
 
+/* Form Elements */
+.form-group {
+    margin-bottom: 25px;
+}
 
 label {
-
-    margin-top: 20px;
+    display: block;
+    margin-bottom: 8px;
     font-weight: bold;
-    color: #7a9e9f; 
-} 
+    color: #478f5e;
+}
 
-
-input[type="text"],
+input[type="email"],
 input[type="password"] {
     width: 100%;
-    padding: 10px 12px;
-    margin-top: 8px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-sizing: border-box;
     font-size: 16px;
-} 
-
+    transition: all 0.3s;
+}
 
 input:focus {
     outline: none;
@@ -56,36 +60,66 @@ input:focus {
     box-shadow: 0 0 5px rgba(122, 158, 159, 0.5);
 }
 
-
-.loginButton{
-    width: 250px;
-    background-color: #7a9e9f;
-    color: white;
-    font-size: 25px;
-    border: none;
-    border-bottom: 600px;
-    border-radius: 30px;
-    cursor: pointer;
-    margin-left: 500px;
-    margin-bottom: 70px;
-    padding: 12px;
-
+/* Forgot Password Link */
+.forgot-password {
+    text-align: right;
+    margin: -15px 0 20px;
 }
 
-button:hover {
-    background-color: #5c6d70;
-} 
+.forgot-password a {
+    color: #478f5e;
+    text-decoration: none;
+    font-size: 14px;
+}
 
-.RegisterButton{
-    width: 250px;
-    background-color: #7a9e9f;
-    color: white;
-    font-size: 25px;
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.loginButton,
+.registerButton {
+    width: 100%;
+    padding: 12px;
+    color: #f4efe9;
+    font-size: 18px;
     border: none;
-    border-bottom: 500px;
     border-radius: 30px;
     cursor: pointer;
-    margin-left: 500px;
-    margin-bottom: 70px;
-    padding: 12px;
+    transition: background-color 0.3s;
+}
+
+.loginButton {
+    background-color: #478f5e;
+}
+
+.registerButton {
+    background-color: #478f5e;
+}
+
+.loginButton:hover {
+    background-color: #5c6d70;
+}
+
+.registerButton:hover {
+    background-color: #3b3c40;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
 }

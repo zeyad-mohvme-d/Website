@@ -1,56 +1,62 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="LoginScreen.css">
-        <title><h2>Login</h2></title>
-    </head>
-    <body>
-        <h1 id="login">Login</h1>
-        <form>
-            <div>
-                <label for="username" class="label">Name</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-        <br>
-            <div>
 
-                <label for="password" class="pass">Password</label>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="LoginScreen.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
             </div>
+
+            <div class="forgot-password">
+                <a href="#">Forgot password?</a>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" class="loginButton">Login</button>
+                <button type="button" class="registerButton" onclick="register()">Create Account</button>
+            </div>
         </form>
-        <button class="loginButton" type="button" onclick="handleLogin()">Login</button> <br>
-        <button class="RegisterButton" type="button" onclick="window.open('/Screens/RegisterScreen/RegisterScreen.html', '_blank')">Create Account</button>
+    </div>
 
+    <script>
 
-        <script>
-            function handleLogin() {
-                const username = document.getElementById('username').value;
-                const password = document.getElementById('password').value;
+        function register(){
+            window.location.href = '/Screens/RegisterScreen/RegisterScreen.html';
+        }
 
-
-                const savedUsername = localStorage.getItem('username');
-                const savedPassword = localStorage.getItem('password');
-    
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
             
-                if (username === 'admin' && password === 'admin123') {
-                
-                    window.location.href = '/Screens/AdminDashboard/admin.html';
-                } 
-                
-                else if(username === savedUsername && password === savedPassword){
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const savedEmail = localStorage.getItem('email');
+            const savedPassword = localStorage.getItem('password');
 
-                    alert('Login successful! Welcome back ' + username);
-                    window.location.href = '/index.html'; 
-                }
-                
-                else {
-                
-                    alert('Invalid credentials or not an admin.');
-                }
+            if (email === 'admin@example.com' && password === 'admin123') {
+                window.location.href = '/Screens/AdminDashboard/admin.html';
+            } 
+            else if(email === savedEmail && password === savedPassword) {
+                alert('Login successful!');
+                window.location.href = '/index.html';
             }
-        </script>
-
-
-    </body>
+            else {
+                alert('Invalid credentials');
+            }
+        });
+    </script>
+</body>
 </html>
