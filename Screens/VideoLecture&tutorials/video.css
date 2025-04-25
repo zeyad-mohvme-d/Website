@@ -1,9 +1,12 @@
 body {
+    background-image: url('../../utils/photos/mainBack.png'); /* Update the path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #133416;
-    color: #333;
+    color: #fff; /* Adjust text color for better visibility */
 }
 
 h1 {
@@ -17,14 +20,14 @@ h1 {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background: #0e7d17;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for contrast */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .video-container h2 {
     font-size: 24px;
-    color:#fdfdfd;
+    color: #fdfdfd;
     margin-bottom: 10px;
 }
 
@@ -41,24 +44,11 @@ a {
     margin: 20px auto;
     text-decoration: none;
     font-size: 18px;
-    color: #133416;
+    color: #007BFF;
     font-weight: bold;
 }
 
 a:hover {
     text-decoration: underline;
     color: #0056b3;
-}
-.download-link {
-    display: inline-block;
-    margin-top: 10px;
-    text-decoration: none;
-    font-size: 16px;
-    color: #fefefe;
-    font-weight: bold;
-}
-
-.download-link:hover {
-    text-decoration: underline;
-    color: #ffffff;
 }
