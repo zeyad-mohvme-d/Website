@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Live Chat</title>
-        <link rel="stylesheet" href="chat.css">
-    </head>
-    <body>
-        
-
-
-
-
-        <div class="ai-input-container">
-            <input placeholder="Ask me anything..." class="ai-input" type="text" />
-            <button class="ai-button">Send</button>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Chat with Tutors | EduPlatform</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Live Chat with Tutor</h2>
+            <div class="status online">Online</div>
         </div>
 
+        <div class="chat-messages" id="messageArea">
+            <!-- Messages will appear here -->
+        </div>
 
-    </body>
+        <div class="chat-input">
+            <input type="text" id="messageInput" placeholder="Type your message...">
+            <button id="sendButton">Send</button>
+        </div>
+    </div>
+
+    <script src="chat.js"></script>
+</body>
 </html>

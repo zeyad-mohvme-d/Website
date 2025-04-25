@@ -1,0 +1,237 @@
+/* profiles.css - Enhanced Version */
+
+/* Base Styles */
+.profiles-main {
+    padding: 2rem 1rem;
+    min-height: calc(100vh - 150px);
+    background-color:#163823;
+}
+
+.profiles-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Header Section */
+.profiles-section h1 {
+    font-size: 2.8rem;
+    color: #f4efe9;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.profiles-section h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #478f5e, #e8e6dd);
+    border-radius: 3px;
+}
+
+.section-description {
+    color: #f4efe9;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Profile Cards Container */
+.profiles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+/* Individual Profile Card */
+.profile-card {
+    background: #478f5e;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    width: 100%;
+    max-width: 320px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    padding-bottom: 1.5rem;
+    position: relative;
+    border: 1px solid #eaeaea00;
+}
+
+.profile-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+    border-color: #3498db00;
+}
+
+.profile-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(90deg, #3498db, #9b59b6) 1;
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover img {
+    transform: scale(1.03);
+}
+
+.profile-card h3 {
+    margin: 1.5rem 0 0.5rem;
+    color: #f4efe9;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.profile-card .title {
+    color: #f4efe9;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.profile-card .title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: #f4efe9;
+    opacity: 0.5;
+}
+
+.profile-card .bio {
+    color: #f4efe9;
+    font-size: 0.95rem;
+    padding: 0 1.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Expertise Tags */
+.expertise {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0 1.5rem;
+    margin-bottom: 1.8rem;
+}
+
+.expertise span {
+    background: linear-gradient(135deg, #f5f7fa, #e4e8eb);
+    color: #478f5e;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.expertise span:hover {
+    background: #3498db;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* View Courses Button */
+.view-courses {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #e8e6dd, #f4efe9);
+    color: #478f5e;
+    text-align: center;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(239, 239, 239, 0.2);
+}
+
+.view-courses:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px #478f5e;
+    background: linear-gradient(135deg, #478f5e, #478f5e);
+}
+
+/* Active Link Styling */
+.nav-links a.active {
+    color: #3498db;
+    font-weight: 600;
+    position: relative;
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #3498db;
+    border-radius: 3px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .profiles-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .profiles-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .profile-card {
+        max-width: 100%;
+    }
+
+    .profile-card img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profiles-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .profile-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .view-courses {
+        width: 90%;
+        padding: 0.7rem;
+    }
+}
