@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Browser</title>
+    <link rel="stylesheet" href="Course.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Course Browser</h1>
+        
+        <div class="category-filter">
+            <button class="category-btn active" data-category="all">All Courses</button>
+            <button class="category-btn" data-category="web">Web Development</button>
+            <button class="category-btn" data-category="design">Design</button>
+            <button class="category-btn" data-category="business">Business</button>
+        </div>
+        
+        <div class="courses-container" id="courseGrid">
+            <!-- Courses will be loaded here by JavaScript -->
+        </div>
+    </div>
+
+    <script src="Course.js"></script>
+</body>
+</html>
