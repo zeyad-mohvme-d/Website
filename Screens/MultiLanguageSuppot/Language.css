@@ -1,0 +1,159 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4efe9;
+    color: #163823;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.lang-header {
+    background-color: #163823;
+    color: #e8e6dd;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.lang-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #ffb91c;
+}
+
+/* Language Navigation */
+.language-nav {
+    background-color: #478f5e;
+    padding: 15px 0;
+}
+
+.language-selector {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.language-selector a {
+    color: #e8e6dd;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.language-selector a:hover {
+    background-color: #163823;
+}
+
+.language-selector a.active {
+    background-color: #ffb91c;
+    color: #163823;
+}
+
+/* Main Content */
+.lang-main {
+    padding: 40px 0;
+}
+
+.welcome-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.welcome-section h2 {
+    color: #163823;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.welcome-section p {
+    font-size: 1.1rem;
+    color: #478f5e;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Features Section */
+.features-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background-color: #e8e6dd;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffb91c;
+}
+
+.feature-card h3 {
+    color: #163823;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #478f5e;
+}
+
+/* Footer */
+.lang-footer {
+    background-color: #163823;
+    color: #e8e6dd;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Language Content Toggle */
+.lang-content {
+    display: none;
+}
+
+.lang-content.active {
+    display: block;
+}
+
+/* RTL Support for Arabic */
+[lang="ar"] {
+    direction: rtl;
+    text-align: right;
+}
+
+[lang="ar"] .language-selector {
+    justify-content: flex-end;
+}
+
+[lang="ar"] .feature-card {
+    text-align: right;
+}

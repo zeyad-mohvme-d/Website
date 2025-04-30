@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,7 +20,7 @@
     <footer class="bottom-bar">
         <p>&copy; 2025 EduPlatform. All rights reserved.</p>
         <nav class="footer-links">
-            <a href="#" target="_blank">Support</a>
+            <a href="/Screens/MultiLanguageSuppot/Language.html" target="_blank">Support</a>
             <a href="screens/ContactUs/ContactUs.html" target="_blank">ContactUs</a>
             <a href="Screens/Instructors/instr.html">Instructor Profiles</a>
             <a href="Screens/liveChat/chat.html" target="_blank">Live Chat</a>
@@ -31,5 +31,62 @@
         <button class="loginButton" type="button" onclick="window.open('screens/LoginScreen/LoginScreen.html')">Login</button>
         <button class="RegisterButton" type="button" onclick="window.open('Screens/RegisterScreen/RegisterScreen.html')">Register</button>
     </div>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Educational Platform</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="Screens/MultiLanguageSupport/language-styles.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="logo" data-lang-key="logo">EduPlatform</div>
+        <nav class="nav-links">
+            <a href="screens/CoursesScreen/CoursesScreen.html" target="_blank" data-lang-key="courses">Courses</a>
+            <a href="Screens/AssigmentScreen/Assigment.html" target="_blank" data-lang-key="assignments">Assignments</a>
+            <a href="Screens/StudentDiscussionForums/Discussions.html" target="_blank" data-lang-key="forums">Forums</a>
+            <a href="Screens/VideoLecture&tutorials/video.html" target="_blank" data-lang-key="videos">Video Lectures & Tutorials</a>
+            <a href="Screens/ProgressScreen/Progress.html" target="_blank" data-lang-key="progress">Progress</a>
+            <a href="#" target="_blank" data-lang-key="certifications">Certifications</a>
+        </nav>
+    </header>
+
+    <div class="stack-container">
+        <img src="utils/photos/mainBack.png" id="imgBack" alt="Background Image">
+        <button class="loginButton" type="button" onclick="window.open('screens/LoginScreen/LoginScreen.html')" data-lang-key="login">Login</button>
+        <button class="RegisterButton" type="button" onclick="window.open('Screens/RegisterScreen/RegisterScreen.html')" data-lang-key="register">Register</button>
+    </div>
+
+    <!-- Language Modal (hidden by default) -->
+    <div id="languageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 data-lang-key="choose-language">Choose Language</h2>
+            <div class="language-options">
+                <button class="lang-btn" data-lang="en">English</button>
+                <button class="lang-btn" data-lang="ar">العربية</button>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="bottom-bar">
+        <p>&copy; 2025 EduPlatform. <span data-lang-key="rights">All rights reserved.</span></p>
+        <nav class="footer-links">
+            <a href="/Screens/MultiLanguageSupport/script.js" id="supportLink" data-lang-key="support">Support</a>
+            <a href="screens/ContactUs/ContactUs.html" target="_blank" data-lang-key="contact">Contact Us</a>
+            <a href="Screens/Instructors/instr.html" data-lang-key="instructors">Instructor Profiles</a>
+            <a href="Screens/liveChat/chat.html" target="_blank" data-lang-key="chat">Live Chat</a>
+        </nav>
+    </footer>
+
+    <script src="/Screens/MultiLanguageSuppot/script.js"></script>
 </body>
 </html>
