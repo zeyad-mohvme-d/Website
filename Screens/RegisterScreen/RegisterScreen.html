@@ -8,36 +8,42 @@
 </head>
 
 <body>
+    <!-- Language Toggle Buttons -->
+    <div class="language-toggle">
+        <button onclick="changeLanguage('en')">English</button>
+        <button onclick="changeLanguage('ar')">العربية</button>
+    </div>
+
     <div class="register-container">
-        <h1>Register</h1>
+        <h1 id="title">Register</h1>
         <form>
             <!-- Full Name Input -->
             <div class="form-group">
-                <label for="name">Full Name</label>
+                <label for="name" id="label-name">Full Name</label>
                 <input type="text" name="name" id="name" required>
             </div>
 
             <!-- Email Input -->
             <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email" id="label-email">Email</label>
                 <input type="email" name="email" id="email" required>
             </div>
 
             <!-- Password Input -->
             <div class="form-group">
-                <label for="password">Password</label>
+                <label for="password" id="label-password">Password</label>
                 <input type="password" name="password" id="password" required>
             </div>
 
             <!-- Confirm Password Input -->
             <div class="form-group">
-                <label for="confirm-password">Confirm Password</label>
+                <label for="confirm-password" id="label-confirm-password">Confirm Password</label>
                 <input type="password" name="confirm-password" id="confirm-password" required>
             </div>
 
             <!-- Academic Level Dropdown -->
             <div class="form-group">
-                <label for="academic-level">Academic Level</label>
+                <label for="academic-level" id="label-academic-level">Academic Level</label>
                 <select name="academic-level" id="academic-level" required>
                     <option value="" disabled selected>Select your academic level</option>
                     <option value="1">Level 1</option>
@@ -48,11 +54,11 @@
             </div>
 
             <!-- Create Account Button -->
-            <button type="button" onclick="create()" class="createAccount">Create Account</button>
+            <button type="button" onclick="create()" class="createAccount" id="create-account-btn">Create Account</button>
         </form>
 
         <!-- Login Prompt -->
-        <div class="login-prompt">
+        <div class="login-prompt" id="login-prompt">
             Already have an account? <a href="../LoginScreen/LoginScreen.html">Login here</a>
         </div>
     </div>
