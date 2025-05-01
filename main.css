@@ -1,8 +1,11 @@
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #163823;
-    height: 120vh; /* Adjusted to 200vh for better visibility of the background image */
+    min-height: 100vh; 
+    position: relative; 
+    padding-bottom: 8%; 
 }
 
 .topbar {
@@ -13,9 +16,10 @@ body {
     padding: 15px 20px;
     color: white;
     position: fixed;
-    width: 98%;
+    width: 100%; 
     top: 0;
     z-index: 1000;
+    box-sizing: border-box; 
 }
 
 .logo {
@@ -32,24 +36,23 @@ body {
 }
 
 .nav-links a:hover {
-    color: #f39c12;
+    color: #163823; 
 }
 
 main {
-    margin-top: 60px; /* to avoid being hidden behind the topbar */
+    margin-top: 60px; 
+    padding-bottom: 20px; 
 }
 
 .stack-container {
     position: relative;
     width: 100%;
-    height: 100vh;
-    margin-top: 60px; 
+    height: calc(100vh - 60px); 
     overflow: hidden;
 }
 
-
 #imgBack {
-    position: relative;
+    position: absolute; 
     top: 0;
     left: 0;
     width: 100%;
@@ -63,7 +66,7 @@ main {
     top: 50%;
     left: 5%;
     color: white;
-    background-color:  #478f5e;
+    background-color: #478f5e;
     border: none;
     padding: 25px 40px;
     font-size: 30px;
@@ -71,19 +74,18 @@ main {
     cursor: pointer;
     z-index: 2;
     transition: background-color 0.3s ease;
-    border-width: 40px;
 }
 
 .loginButton:hover {
-    background-color: #0056b3;
+    background-color: #ffb91c;
 }
 
-.RegisterButton{
+.RegisterButton {
     position: absolute;
     top: 70%;
     left: 5%;
     color: white;
-    background-color:  #478f5e;
+    background-color: #478f5e;
     border: none;
     padding: 24px 40px;
     font-size: 30px;
@@ -91,7 +93,10 @@ main {
     cursor: pointer;
     z-index: 2;
     transition: background-color 0.3s ease;
-    border-width: 40px;
+}
+
+.RegisterButton:hover {
+    background-color: #ffb91c;
 }
 
 .bottom-bar {
@@ -104,6 +109,10 @@ main {
     width: 100%;
     height: 8%;
     border-top: 2px solid #1d8e45;
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .bottom-bar p {
@@ -116,7 +125,7 @@ main {
 }
 
 .footer-links a {
-    color: #fff;
+    color: #f4efe9;
     text-decoration: none;
     margin: 0 1rem;
 }
@@ -124,8 +133,6 @@ main {
 .footer-links a:hover {
     text-decoration: underline;
 }
-
-
 
 /* Language Modal Styles */
 .modal {
@@ -168,7 +175,7 @@ main {
 .lang-btn {
     padding: 12px;
     background-color: #478f5e;
-    color: white;
+    color: #f4efe9;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -177,11 +184,20 @@ main {
 }
 
 .lang-btn:hover {
-    background-color: #163823;
+    background-color: #ffb91c;
 }
 
 /* RTL Support */
 [lang="ar"] {
     direction: rtl;
     text-align: right;
+}
+
+[lang="ar"] .nav-links {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+[lang="ar"] .footer-links {
+    flex-direction: row-reverse;
 }
