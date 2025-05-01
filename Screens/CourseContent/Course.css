@@ -102,4 +102,15 @@ h1 {
     .course-card {
         width: 100%;
     }
+}.search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#searchInput {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #073a04;
+    border-radius: 5px;
 }
