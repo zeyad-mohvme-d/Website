@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const courseGrid = document.getElementById('courseGrid');
     const categoryBtns = document.querySelectorAll('.category-btn');
+    const searchInput = document.getElementById('searchInput');
 
     // Display all courses initially
     displayCourses(courses);
@@ -75,12 +76,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // search input
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        const filteredCourses = courses.filter(course => 
+            course.title.toLowerCase().includes(searchTerm)
+        );
+        displayCourses(filteredCourses);
+    });
+
     // Function to display courses
     function displayCourses(coursesToDisplay) {
         courseGrid.innerHTML = '';
         
         if (coursesToDisplay.length === 0) {
-            courseGrid.innerHTML = '<p style="color:white; width:100%; text-align:center;">No courses found in this category.</p>';
+            courseGrid.innerHTML = '<p style="color:white; width:100%; text-align:center;">No courses found.</p>';
             return;
         }
 
