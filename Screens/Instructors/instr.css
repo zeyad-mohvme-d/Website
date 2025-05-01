@@ -150,7 +150,7 @@
 }
 
 .expertise span:hover {
-    background: #3498db;
+    background: #163823;
     color: white;
     transform: translateY(-2px);
 }
@@ -173,13 +173,13 @@
 
 .view-courses:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px #478f5e;
-    background: linear-gradient(135deg, #478f5e, #478f5e);
+    box-shadow: 0 6px 12px #163823;
+    background: linear-gradient(135deg, #163823, #163823);
 }
 
 /* Active Link Styling */
 .nav-links a.active {
-    color: #3498db;
+    color: #e8e6dd;
     font-weight: 600;
     position: relative;
 }
@@ -191,7 +191,7 @@
     left: 0;
     width: 100%;
     height: 3px;
-    background: #3498db;
+    background: #163823;
     border-radius: 3px;
 }
 
