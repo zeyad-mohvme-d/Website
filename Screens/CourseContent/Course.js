@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
             description: "Learn the basics of web development", 
             category: "web", 
             duration: "4 hours",
-            image: "https://via.placeholder.com/300x150?text=HTML+CSS" 
+            image: "../../utils/photos/hlmlcss.png" 
         },
         { 
             id: 2, 
