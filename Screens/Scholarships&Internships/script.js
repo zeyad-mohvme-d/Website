@@ -1,21 +1,19 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const tabButtons = document.querySelectorAll('.tab-btn');
-  const applyButtons = document.querySelectorAll('.apply-btn');
+document.addEventListener('DOMContentLoaded', () => {
+  // Handle tab switching
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.onclick = () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
 
-  tabButtons.forEach(button => {
-    button.addEventListener('click', function () {
-      tabButtons.forEach(btn => btn.classList.remove('active'));
-      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-
-      this.classList.add('active');
-      const tabId = this.getAttribute('data-tab');
-      document.getElementById(tabId).classList.add('active');
-    });
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    };
   });
-  applyButtons.forEach(button => {
-    button.addEventListener('click', function () {
-      const cardTitle = this.parentElement.querySelector('h3').innerText;
-      alert(`You clicked to apply for: ${cardTitle}`);
-    });
+
+  document.querySelectorAll('.apply-btn').forEach(btn => {
+    btn.onclick = () => {
+      const title = btn.parentElement.querySelector('h3').innerText;
+      alert(`You clicked to apply`);
+    };
   });
 });
