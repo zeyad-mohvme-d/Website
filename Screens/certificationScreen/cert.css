@@ -1,7 +1,7 @@
 .certification-container {
-    padding: 100px 50px 150px;
+    padding: 10px 50px 150px;
     background-color: #163823;
-    min-height: calc(100vh - 160px);
+    min-height: 100px;
 }
 
 .certification-container h1 {
