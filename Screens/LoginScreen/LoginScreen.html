@@ -32,31 +32,51 @@
         </form>
     </div>
 
+
     <script>
-
-        function register(){
-            window.location.href = '/Screens/RegisterScreen/RegisterScreen.html';
-        }
-
         document.getElementById('loginForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-            const savedEmail = localStorage.getItem('email');
-            const savedPassword = localStorage.getItem('password');
-
-            if (email === 'admin@example.com' && password === 'admin123') {
+            
+            // Check for hardcoded admin credentials
+            if (email === 'zeyad@example.com' && password === 'admin123') {
                 window.location.href = '/Screens/AdminDashboard/admin.html';
-            } 
-            else if(email === savedEmail && password === savedPassword) {
-                alert('Login successful!');
-                window.location.href = '/index.html';
+                return;
             }
-            else {
+            
+            // Get ALL stored users (modified approach)
+            const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+            
+            // Check if any stored user matches the login credentials
+            const matchedUser = storedUsers.find(user => 
+                user.email === email && user.password === password
+            );
+            
+            if (matchedUser) {
+                alert('Login successful!');
+                
+                // Store current user session
+                localStorage.setItem('currentUser', JSON.stringify({
+                    email: matchedUser.email,
+                    name: matchedUser.username
+                }));
+                
+                // Redirect based on user type (if you implement roles)
+                if (matchedUser.email === 'zeyad@example.com') {
+                    window.location.href = '/Screens/AdminDashboard/admin.html';
+                } else {
+                    window.location.href = '/index.html';
+                }
+            } else {
                 alert('Invalid credentials');
             }
         });
+    
+        function register() {
+            window.location.href = '/Screens/RegisterScreen/RegisterScreen.html';
+        }
     </script>
 </body>
 </html>

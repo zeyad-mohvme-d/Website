@@ -1,17 +1,33 @@
-// Function to handle account creation
+
 function create() {
     const username = document.getElementById('name').value;
+    const email = document.getElementById('email').value; // Make sure you have this field
     const password = document.getElementById('password').value;
 
-    if (username && password) {
-        // Save the username and password to localStorage
-        localStorage.setItem('username', username);
-        localStorage.setItem('password', password);
+    if (username && email && password) {
+        // Get existing users or initialize empty array
+        const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+        
+        // Check if user already exists
+        if (existingUsers.some(user => user.email === email)) {
+            alert("User with this email already exists!");
+            return;
+        }
+
+        // Add new user
+        existingUsers.push({
+            username: username,
+            email: email,
+            password: password
+        });
+
+        // Save updated users array
+        localStorage.setItem('users', JSON.stringify(existingUsers));
 
         alert("Registration successful! Welcome " + username);
-        window.location.href = '/index.html';
+        window.location.href = '/Screens/LoginScreen/LoginScreen.html'; // Redirect to login screen
     } else {
-        alert("Please fill in both fields.");
+        alert("Please fill in all fields.");
     }
 }
 

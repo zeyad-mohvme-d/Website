@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         en: {
             'logo': 'EduPlatform',
             'courses': 'Courses',
+            'Quizzes': 'Quizzes',
             'assignments': 'Assignments',
             'forums': 'Forums',
             'videos': 'Video Lectures & Tutorials',
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ar: {
             'logo': 'منصة التعليم',
             'courses': 'الدورات',
+            'Quizzes': 'الاختبارات',
             'assignments': 'المهام',
             'forums': 'المنتديات',
             'videos': 'محاضرات ودروس فيديو',
