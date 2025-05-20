@@ -18,38 +18,24 @@ document.addEventListener('DOMContentLoaded', function () {
         messageInput.value = '';
     }
 
-    // Send message when button is clicked
-    sendButton.addEventListener('click', function () {
+    // Function to handle sending a message and auto-reply
+    function handleSend() {
         const messageText = messageInput.value.trim();
         if (messageText) {
-            addMessage(messageText);
+            addMessage(messageText); // Add user's message
+            setTimeout(() => {
+                addMessage("please wait about an hour and your question will be answered", false); // Add default reply
+            }, 500); // Short delay for realism
         }
-    });
+    }
+
+    // Send message when button is clicked
+    sendButton.addEventListener('click', handleSend);
 
     // Send message when Enter key is pressed
     messageInput.addEventListener('keypress', function (e) {
         if (e.key === 'Enter') {
-            const messageText = messageInput.value.trim();
-            if (messageText) {
-                addMessage(messageText);
-            }
+            handleSend();
         }
     });
-
-    // Simulate received message after 1-3 seconds
-    setInterval(function () {
-        const responses = [
-            "Hello! How can I help you today?",
-            "Could you explain your question in more detail?",
-            "I'd be happy to help with that!",
-            "Let me check that for you...",
-            "That's an interesting question!"
-        ];
-
-        if (Math.random() > 0.7 && messageArea.lastElementChild &&
-            messageArea.lastElementChild.classList.contains('sent')) {
-            const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-            setTimeout(() => addMessage(randomResponse, false), 1000 + Math.random() * 2000);
-        }
-    }, 1000);
 });

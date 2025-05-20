@@ -38,7 +38,7 @@
 }
 
 .section-description {
-    color: #f4efe9;
+    color: #eeeded;
     text-align: center;
     margin-bottom: 3rem;
     font-size: 1.1rem;
@@ -151,7 +151,7 @@
 
 .expertise span:hover {
     background: #163823;
-    color: white;
+    color: rgb(195, 92, 92);
     transform: translateY(-2px);
 }
 
@@ -161,7 +161,7 @@
     width: 80%;
     margin: 0 auto;
     padding: 0.8rem;
-    background: linear-gradient(135deg, #e8e6dd, #f4efe9);
+    background: linear-gradient(135deg, #d1b53b, #f4efe9);
     color: #478f5e;
     text-align: center;
     border-radius: 6px;
@@ -179,7 +179,7 @@
 
 /* Active Link Styling */
 .nav-links a.active {
-    color: #e8e6dd;
+    color: #1c190f;
     font-weight: 600;
     position: relative;
 }
