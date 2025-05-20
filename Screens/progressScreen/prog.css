@@ -187,7 +187,6 @@ main {
     background-color: #ffb91c;
 }
 
-/* RTL Support */
 [lang="ar"] {
     direction: rtl;
     text-align: right;
