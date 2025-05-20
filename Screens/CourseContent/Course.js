@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
             description: "Learn the basics of web development", 
             category: "web", 
             duration: "4 hours",
-            image: "../../utils/photos/hlmlcss.png" 
+            image: "/Utils/photos/HTML&CSS.jpg" 
         },
         { 
             id: 2, 
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             description: "Get started with JavaScript programming", 
             category: "web", 
             duration: "6 hours",
-            image: "https://via.placeholder.com/300x150?text=JavaScript" 
+            image: "/Utils/photos/JavaScript.jpg" 
         },
         { 
             id: 3, 
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             description: "Master the fundamentals of good design", 
             category: "design", 
             duration: "5 hours",
-            image: "https://via.placeholder.com/300x150?text=UI+UX" 
+            image: "/utils/photos/UI&UX.jpg" 
         },
         { 
             id: 4, 
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             description: "Learn photo editing and graphic design", 
             category: "design", 
             duration: "3 hours",
-            image: "https://via.placeholder.com/300x150?text=Photoshop" 
+            image: "/utils/photos/PhotoShop.jpg" 
         },
         { 
             id: 5, 
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
             description: "Start your own business successfully", 
             category: "business", 
             duration: "8 hours",
-            image: "https://via.placeholder.com/300x150?text=Business" 
+            image: "/utils/photos/Entre.jpg" 
         },
         { 
             id: 6, 
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
             description: "Learn online marketing strategies", 
             category: "business", 
             duration: "7 hours",
-            image: "https://via.placeholder.com/300x150?text=Marketing" 
+            image: "/utils/photos/DigtalMarketing.jpg" 
         }
     ];
 
