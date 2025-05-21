@@ -25,7 +25,7 @@ function create() {
         localStorage.setItem('users', JSON.stringify(existingUsers));
 
         alert("Registration successful! Welcome " + username);
-        window.location.href = '/Screens/LoginScreen/LoginScreen.html'; // Redirect to login screen
+        window.location.href = '../../Screens/LoginScreen/LoginScreen.html'; // Redirect to login screen
     } else {
         alert("Please fill in all fields.");
     }

@@ -42,7 +42,7 @@
             
             // Check for hardcoded admin credentials
             if (email === 'zeyad@example.com' && password === 'admin123') {
-                window.location.href = '/Screens/AdminDashboard/admin.html';
+                window.location.href = '../../Screens/AdminDashboard/admin.html';
                 return;
             }
             
@@ -67,7 +67,7 @@
                 if (matchedUser.email === 'zeyad@example.com') {
                     window.location.href = '/Screens/AdminDashboard/admin.html';
                 } else {
-                    window.location.href = '/index.html';
+                    window.location.href = '../../index.html';
                 }
             } else {
                 alert('Invalid credentials');
